@@ -7,17 +7,20 @@ import DummyView from "./components/DummyView";
 import { HookComponent } from "./components/HookComponent";
 import { DepsProvider } from "./context/depContext";
 import MoreEffectService from "./service/moreEffectService";
+import MyHook from "./components/MyHook/MyHook";
 
 const App = () => {
-  return (
-    <DepsProvider
-      services={{
-        moreEffectService: MoreEffectService(),
-      }}
-    >
-      <MoreEffect />
-    </DepsProvider>
-  );
+  // return (
+  //   <DepsProvider
+  //     services={{
+  //       moreEffectService: MoreEffectService(),
+  //     }}
+  //   >
+  //     <MoreEffect />
+  //   </DepsProvider>
+  // );
+
+  return <MyHook />;
 };
 
 export default App;
