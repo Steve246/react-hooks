@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 import MoreEffect from "./components/MoreEffect";
+import ThemeModifier from "./components/ThemeModifier";
+import DummyView from "./components/DummyView";
 
 const App = () => {
   const [dark, setDark] = useState(false);
@@ -23,7 +25,14 @@ const App = () => {
   //   </div>
   // );
 
-  return <MoreEffect />;
+  // return <MoreEffect />;
+
+  const [pageID, setPageId] = useState(0);
+  return pageID === 0 ? (
+    <ThemeModifier onNavigate={() => setPageId(1)} />
+  ) : (
+    <DummyView onNavigate={() => setPageId(0)} />
+  );
 };
 
 export default App;
