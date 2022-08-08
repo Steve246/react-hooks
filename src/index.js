@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { setupStore } from "./store";
 
 import { Provider } from "react-redux";
+import { DepsProvider } from "./context/depContext";
+import moreEffectService from "./service/moreEffectService";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const store = setupStore();
@@ -13,7 +15,9 @@ const store = setupStore();
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <DepsProvider services={{ moreEffectService: moreEffectService() }}>
+        <App />
+      </DepsProvider>
     </Provider>
   </React.StrictMode>
 );
