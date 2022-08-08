@@ -1,4 +1,4 @@
-const MoreEffectService = () => {
+const moreEffectService = () => {
   const doPrint = (id) => {
     return "response" + id;
   };
@@ -8,4 +8,4 @@ const MoreEffectService = () => {
   };
 };
 
-export default MoreEffectService;
+export default moreEffectService;
