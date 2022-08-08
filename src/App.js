@@ -4,6 +4,7 @@ import { useState } from "react";
 import MoreEffect from "./components/MoreEffect";
 import ThemeModifier from "./components/ThemeModifier";
 import DummyView from "./components/DummyView";
+import { HookComponent } from "./components/HookComponent";
 
 const App = () => {
   const [dark, setDark] = useState(false);
@@ -27,12 +28,14 @@ const App = () => {
 
   // return <MoreEffect />;
 
-  const [pageID, setPageId] = useState(0);
-  return pageID === 0 ? (
-    <ThemeModifier onNavigate={() => setPageId(1)} />
-  ) : (
-    <DummyView onNavigate={() => setPageId(0)} />
-  );
+  // const [pageID, setPageId] = useState(0);
+  // return pageID === 0 ? (
+  //   <ThemeModifier onNavigate={() => setPageId(1)} />
+  // ) : (
+  //   <DummyView onNavigate={() => setPageId(0)} />
+  // );
+
+  <HookComponent />;
 };
 
 export default App;
